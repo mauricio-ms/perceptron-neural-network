@@ -42,6 +42,12 @@ public final class NeuralNetwork {
         this.deltas = deltas;
     }
 
+    public static void main(String[] args) throws IOException {
+        final NeuralNetwork neuralNetwork = new NeuralNetwork();
+        neuralNetwork.trainNetworkFromFile(Configuration.TRAINING_FILE);
+        neuralNetwork.testNetworkFromFile(Configuration.TEST_FILE);
+    }
+
     private double[][][] buildRandomWeights() {
         final double[][][] randomWeights = new double[2][][];
         randomWeights[0] = new double[16][13];
@@ -235,11 +241,5 @@ public final class NeuralNetwork {
 
     public double[][] getOutputs() {
         return outputs;
-    }
-
-    public static void main(String[] args) throws IOException {
-        final NeuralNetwork neuralNetwork = new NeuralNetwork();
-        neuralNetwork.trainNetworkFromFile(Configuration.TRAINING_FILE);
-        neuralNetwork.testNetworkFromFile(Configuration.TEST_FILE);
     }
 }

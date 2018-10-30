@@ -90,7 +90,7 @@ public final class ConfusionMatrix {
             statistics[ACCURACY_INDEX][i] = (double) (vp + vn) / (vp + fp + vn + fn);
             statistics[ERROR_INDEX][i] = 1 - statistics[ACCURACY_INDEX][i];
             statistics[RECALL_INDEX][i] = (double) vp / (vp + fn);
-            statistics[PRECISION_INDEX][i] = (double)  vp / (vp + fp);
+            statistics[PRECISION_INDEX][i] = (double) vp / (vp + fp);
             statistics[SPECIFICITY_INDEX][i] = (double) vn / (vn + fp);
             statistics[F_MEASURE_INDEX][i] = 2 * (statistics[RECALL_INDEX][i] * statistics[PRECISION_INDEX][i]) /
                     (statistics[RECALL_INDEX][i] + statistics[PRECISION_INDEX][i]);

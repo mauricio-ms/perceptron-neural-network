@@ -12,7 +12,7 @@ public final class PathsHelper {
 
     public static Path getFromResources(final String pathInsideResources) {
         final URL resource = PathsHelper.class.getClassLoader().getResource(pathInsideResources);
-        if( resource == null ) {
+        if (resource == null) {
             throw buildIllegalArgumentException(pathInsideResources);
         }
         try {
