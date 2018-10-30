@@ -1,3 +1,3 @@
 Execute the class NeuralNetwork.
 
-The Neural Network can be configured as teh Configuration class.
+The Neural Network can be configured as the Configuration class.
